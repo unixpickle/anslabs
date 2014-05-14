@@ -1,5 +1,7 @@
 # ANSlab
 
+**NOTE:** This is currently on hold for some other stuff I'm working on. Ultimately, though, I *will* need this.
+
 The purpose of this project is to provide a well tested, easy-to-use Slab allocator for OS kernels.
 
 # Usage
