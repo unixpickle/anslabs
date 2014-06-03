@@ -1,5 +1,5 @@
-#ifndef __ANSLAB_RAW_H__
-#define __ANSLAB_RAW_H__
+#ifndef __ANSLABS_RAW_H__
+#define __ANSLABS_RAW_H__
 
 #include <cstddef>
 #include <cstdint>

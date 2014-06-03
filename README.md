@@ -4,6 +4,12 @@ The purpose of this project is to provide a well tested, easy-to-use Slab alloca
 
 # Usage
 
+First, add the `include/` directory to your header search path and include anslabs like this:
+
+    #include <anslabs>
+
+All of the functionality of anslabs is under the namespace `ANSlabs`.
+
 ## Raw Slabs
 
 Raw slabs allocate a certain number of elements once using a `new` call. A raw slab will never allocate *more* elements, so you cannot use them exclusively unless you know the absolute maximum number of elements you will ever need.
@@ -21,3 +27,9 @@ Now, you can allocate and free buffers from the slab easily:
     allocator.FreeBuf(myBuffer);
 
 The `AllocBuf()` method will return `NULL` when there are no free elements left in the slab.
+
+## Cap Slabs
+
+Cap slabs are used pretty much identically to raw slabs, but if they run out of memory they will start returning objects from `new` and `delete`. This way any number of elements may be allocated, but the allocation will stop being `O(1)` after a certain *cap* (hence the name cap allocator).
+
+You may use a raw allocator the same way you would use a raw allocator, but use the class name `ANSlabs::Cap<X, Y>()`.
