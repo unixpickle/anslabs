@@ -32,4 +32,4 @@ The `AllocBuf()` method will return `NULL` when there are no free elements left 
 
 Cap slabs are used pretty much identically to raw slabs, but if they run out of memory they will start returning objects from `new` and `delete`. This way any number of elements may be allocated, but the allocation will stop being `O(1)` after a certain *cap* (hence the name cap allocator).
 
-You may use a raw allocator the same way you would use a raw allocator, but use the class name `ANSlabs::Cap<X, Y>()`.
+You may use a cap allocator the same way you would use a raw allocator, but use the class name `ANSlabs::Cap<X, Y>()`.
