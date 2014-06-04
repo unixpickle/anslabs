@@ -1,3 +1,5 @@
+#include <cassert>
+
 namespace ANSlabs {
 
 #define _RAW_TEMPLATE_ template <size_t MaxCount, size_t Element>

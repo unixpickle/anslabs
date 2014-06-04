@@ -1,2 +1,3 @@
 #include "../src/raw.hpp"
 #include "../src/cap.hpp"
+#include "../src/structor.hpp"
