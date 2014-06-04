@@ -1,5 +1,5 @@
-#include <cassert>
 #include <anslabs>
+#include <cassert>
 
 static int globalCount = 0;
 
@@ -35,5 +35,12 @@ int main(int, const char **) {
   assert(obj->field1 == 0x11);
   test.Delete(obj);
   assert(globalCount == 0);
+  
+  obj = test.New();
+  assert(globalCount == 1);
+  assert(obj->field1 == 0x10);
+  test.Delete(obj);
+  assert(globalCount == 0);
+  
   return 0;
 }
